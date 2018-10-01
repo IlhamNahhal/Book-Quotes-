@@ -1,0 +1,208 @@
+﻿body {
+   margin-top:50px;
+    background-image: url('pexels-photo-1092364.jpeg');
+    font-family: 'Hind Vadodara', sans-serif;
+    font-size:15px;
+    
+   
+}
+
+h1, h2, h3, h4
+{
+     font-family: 'Hind Vadodara', sans-serif;
+     text-shadow: 3px 3px 3px white;
+       
+}
+.iQuote
+{ 
+     font-size:60px;
+     text-shadow: 3px 3px 3px white;
+     
+}
+.container
+{
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* Set padding to keep content from hitting the edges */
+/*.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}*/
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 480px;
+}
+
+/*====================================================================================================
+MY CSS
+=========================================================================================================*/
+
+.myImg
+{
+    height: 300px;
+    width: 200px;
+    margin:20px;
+    
+}
+.myImgDetails
+{
+    height: 240px;
+    width: 150px;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color:black;
+}
+
+.quoteContainer
+{
+    position: relative;
+    bottom:25%;
+    top: 25%;
+   
+}
+.quoteContainer  a 
+{
+    color:white;
+    font-weight:600;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size:15px;
+    
+}
+
+.navbar{
+    background-color:rgb(116, 119, 119);
+    color:rgba(92, 181, 168, 0.3);
+    border-bottom:none;
+    height: 30px;
+    margin-bottom:20px;
+
+}
+
+.Bg {
+    height: 100vh;
+    background-image: url('pexels-photo-1092364.jpeg');
+    background-attachment: fixed;
+    background-repeat:repeat;
+}
+
+.Bg2
+{
+    height: 100%;
+    background-image: url('pexels-photo-1092364.jpeg');
+    
+
+}
+  
+
+.searchContainer
+{
+    position:relative;
+    top:50vh;
+}  
+.quoteSearch
+{
+    width:320px;
+}
+
+.headingContainer
+{
+   position:relative;
+    top:35vh;
+}
+.myImgContainer {
+    
+   
+}
+.booksheadingContainer h1
+{
+    margin-top:15vh;
+    font-size:40px;
+}
+  
+.booksSearchContainer
+{
+   margin-top:5vh;
+}
+    .booksContainer{
+   margin-top:3vh;
+}
+.addBook
+{
+    margin-right:800px;
+   margin-top:500px;
+}
+
+
+.detailsContainer 
+{
+    background-color:rgba(248, 249, 250, 0.78);
+    margin:8vw 16vw;
+    border-bottom-left-radius:60px;
+    border-style:outset;
+    padding-bottom:40px;
+    padding-left:5vw;
+    padding-right:5vw;
+
+     
+}   
+
+.detailsBody
+{
+    margin-top:80px;
+}
+
+.AddContainer
+{
+    background-color:rgba(248, 249, 250, 0.78);
+    margin: 8vw 23vw;
+    border-bottom-left-radius:60px;
+    border-style:outset;
+    padding-bottom:40px;
+}
+
+.cantFind
+{
+   font-weight:bold;
+   margin-left:170px;
+}
+
+.addAuthor
+{
+    margin-left:50px;
+}
+.btn-default
+{
+    font-weight:bold;
+    font-size:15px;
+}
+
+.footer
+{
+    display: block;
+
+}
+ 
+
+.authorsContainer
+{
+    margin-right:16vw;
+     margin-left:16vw;
+}

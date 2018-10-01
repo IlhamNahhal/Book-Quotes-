@@ -1,0 +1,60 @@
+﻿@model IEnumerable<booksQuotesApp.Models.Quote>
+
+@{
+    ViewBag.Title = "Quotes";
+}
+
+<div class="Bg text-center">
+    <div class="headingContainer">
+        <h1 class="iQuote">IQuote.</h1>
+        <br />
+       
+   
+        <h2> Your Favorite Book Quotes.</h2>
+     
+    </div>
+        
+     <div class="searchContainer">
+        @using (Html.BeginForm("Index", "Quotes", "FormMethod.Get"))
+        {
+            <p>
+
+                @Html.TextBox("searchString", null, new { @placeholder = "Find by keyword, author Name or book name..", @class = "quoteSearch" })
+
+                <input type="submit" value="Search" />
+            </p>
+            
+        }
+         <br/>
+
+        <span>@Html.ActionLink("Add a quote", "Create", null, new { @class = "btn btn-default" })</span>
+    </div>
+</div>
+
+
+<div class="row">
+    @foreach (var quote in Model)
+    {
+
+
+        <div style="background-image:url(@Url.Content(quote.ImageURL)) ; background-size:cover; height:320px;" class="col-md-3 text-center">
+
+            <div class="quoteContainer">
+                <div><a href="@Url.Action("Details","Quotes", new {id = quote.Id })">"@Html.DisplayFor(model => quote.QuoteText)"</a></div>
+                <br />
+
+                <div class="quotedetails">
+                    <a href="@Url.Action("Details","Authors", new {id = quote.Book.AuthorId })">
+                        -@Html.DisplayFor(model => quote.Book.Author.Name),
+                    </a> <span>
+                        <a href="@Url.Action("Details","Books", new {id = quote.BookId })">
+                            @Html.DisplayFor(model=> quote.Book.Name)
+                        </a>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        
+    }
+</div>

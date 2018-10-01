@@ -1,0 +1,64 @@
+﻿@model IEnumerable<booksQuotesApp.Models.Author>
+
+
+
+@{
+    ViewBag.Title = "Authors";
+}
+
+
+@{
+    int count = 0;
+}
+
+<div class="text-center container">
+
+    <div class="booksheadingContainer">
+        <h1>Authors</h1>
+    </div>
+
+    <div class="booksSearchContainer">
+  
+
+
+
+        @using (Html.BeginForm("Index", "Authors", "FormMethod.Get"))
+
+            {
+
+            <p>
+
+                @Html.TextBox("SearchString", null, new { @placeholder = " Search by author's name..", @class = "quoteSearch" })
+                <input type="submit" value="Search" />
+
+            </p>
+
+        }
+        <br/>
+        <br/>
+
+        <span class="addBook">@Html.ActionLink("Add New Author", "Create", null, new { @class = "btn btn-default" })</span>
+
+    </div>
+
+
+
+    @*display a clickable image of each item*@
+    @foreach (var author in Model)
+    {
+        if (count % 4 == 0)
+        {
+            <br />
+                <br />
+        }
+        <span class="myImgContainer">
+            <a href="@Url.Action("Details", new {id = author.Id })">
+                <img class="myImg" src="@Url.Content(author.ImageURL)">
+
+            </a>
+        </span>
+        count++;
+    }
+</div>
+
+
